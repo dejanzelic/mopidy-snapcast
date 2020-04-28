@@ -6,7 +6,7 @@ from mopidy import mixer
 
 import pykka
 
-from snapcast_socket import snapcast
+from .snapcast_socket import snapcast
 
 VOLUME_METHODS = [
 "Client.OnConnect",
