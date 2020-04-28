@@ -78,7 +78,7 @@ class snapcast(object):
       msg['params'] = params
     socketmsg = json.dumps(msg) + "\r\n"
     select.select([],[self.socket],[])
-    self.socket.send(socketmsg)
+    self.socket.send(socketmsg.encode())
     self.gotmessage.wait()
 
     self.msgid += 1
