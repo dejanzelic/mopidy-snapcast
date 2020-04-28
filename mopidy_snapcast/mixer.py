@@ -59,7 +59,7 @@ class SnapcastMixer(pykka.ThreadingActor, mixer.Mixer):
         if method in VOLUME_METHODS:
           self.trigger_volume_changed(self.get_volume())
         
-	if method in MUTE_METHODS:
+        if method in MUTE_METHODS:
           self.trigger_mute_changed(self.get_mute())
 
     def on_start(self):
