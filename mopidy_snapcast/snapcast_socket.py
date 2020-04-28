@@ -90,7 +90,7 @@ class snapcast(object):
       select.select([self.socket],[],[])
       data = ''
       while len(data) == 0 or data[-1] != "\n":
-        data += self.socket.recv(1)
+        data += self.socket.recv(1).decode()
 
       try:
         my_data = json.loads(data)
