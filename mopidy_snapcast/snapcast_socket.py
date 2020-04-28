@@ -98,10 +98,10 @@ class snapcast(object):
         raise ValueError(data)
 
       if 'id' in my_data:
-	if my_data['id'] == self.msgid:
-	   self.message = my_data 
+        if my_data['id'] == self.msgid:
+           self.message = my_data 
            self.gotmessage.set()
-	else:
+        else:
            raise ValueError(my_data)
       else:
            self.handle_message(**my_data)
